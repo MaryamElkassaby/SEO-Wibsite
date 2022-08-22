@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.6s;
+}
+
+:root {
+  --red:#fa4f09;
+  --black:#333;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--white);
+}
+
+body.active {
+  --black:#fff;
+  --white:#111;
+  --light-color:#aaa;
+  --light-bg:#222;
+}
+
+.haeder {
+  color: var(--black);
+}
+
+.span-header {
+  color: var(--red);
+}
+
+.btn-light {
+  background: var(--light-color);
+  font-size: 16px;
+  text-align: center;
+}
+.btn-light:hover {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.btn-light:focus {
+  outline: none;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--light-bg);
+  padding: 15px;
+}
+.navbar .navbar-brand {
+  color: var(--red);
+  font-size: 25px;
+}
+.navbar .navbar-brand i {
+  color: var(--red);
+}
+.navbar ul li {
+  padding: 0px 10px;
+}
+.navbar ul li a {
+  color: var(--black);
+  cursor: pointer;
+}
+.navbar ul li a:hover, .navbar ul li a:focus {
+  color: var(--red);
+}
+.navbar i {
+  font-size: 25px;
+  color: var(--black);
+  cursor: pointer;
+}
+.navbar i:hover {
+  color: var(--red);
+}
+
+#theme-btn.fa-sun {
+  transform: rotate(90deg);
+}
+
+.Home .box {
+  margin: 50px 0px;
+  flex-wrap: wrap-reverse;
+}
+.Home .home-cont h3 {
+  color: var(--black);
+  font-size: 30px;
+}
+.Home .home-cont p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-color);
+  margin: 20px 0px;
+}
+
+.Services {
+  margin: 50px 0px;
+}
+.Services .Services-box {
+  background-color: var(--light-bg);
+  padding: 20px;
+  margin: 10px;
+}
+.Services .Services-box .Services-img {
+  text-align: center;
+}
+.Services .Services-box .Services-img img {
+  height: 10rem;
+  margin-bottom: 50px;
+}
+.Services .Services-box .Services-cont {
+  text-align: center;
+}
+.Services .Services-box .Services-cont h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+}
+.Services .Services-box .Services-cont p {
+  font-size: 14px;
+  padding: 10px 0px;
+  color: var(--light-color);
+}
+
+.Work {
+  margin: 100px 0px;
+}
+.Work .img-work {
+  -moz-columns: 3 25rem;
+       columns: 3 25rem;
+  gap: 2rem;
+  margin-top: 70px;
+}
+.Work .img-work img {
+  margin-bottom: 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.Pricing .Pricing-box {
+  padding: 30px 0px;
+}
+.Pricing .Pricing-box h4 {
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: var(--red);
+  color: var(--black);
+}
+.Pricing .Pricing-box p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px 0px;
+  color: var(--black);
+}
+.Pricing .Pricing-box p span {
+  font-size: 50px;
+  color: var(--red);
+  font-weight: 600;
+}
+.Pricing .Pricing-box ul {
+  list-style: none;
+}
+.Pricing .Pricing-box ul li {
+  padding: 10px 0px;
+}
+.Pricing .Pricing-box ul li i {
+  color: var(--red);
+}
+.Pricing .Pricing-box ul li span {
+  padding: 0px 5px;
+  font-size: 14px;
+  color: var(--black);
+}
+.Pricing .Secound {
+  background: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 30px 0px;
+}
+
+.Reviews .user img {
+  height: 7rem;
+  width: 7rem;
+  margin-right: 20px;
+}
+.Reviews .user .info p {
+  color: var(--black);
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+}
+.Reviews .user .info .rate i {
+  color: var(--red);
+}
+.Reviews .comment {
+  font-size: 12px;
+  color: var(--light-color);
+  background-color: var(--light-bg);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  line-height: 2;
+}
+.Reviews .comment::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  background: var(--light-bg);
+  transform: rotate(45deg);
+}
+
+.Contact .box-container .box {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 5px;
+}
+.Contact .box-container .box p {
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 700;
+}
+.Contact .box-container .box ul {
+  list-style: none;
+}
+.Contact .box-container .box ul li {
+  color: var(--light-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+.Contact .box-container .box ul li i {
+  color: var(--red);
+  margin-right: 10px;
+}
+.Contact .box-container .two ul li span {
+  color: var(--red);
+  padding-right: 10px;
+  font-weight: 600;
+}
+.Contact .form {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.Contact .form p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-color);
+}
+.Contact .form .form-control {
+  color: var(--light-color);
+}
+.Contact .form .form-check .form-check-label {
+  color: var(--light-color);
+}
+.Contact .form .btn-primary {
+  background-color: var(--red);
+  outline-color: var(--red);
+  border-color: var(--red);
+}
+.Contact .text {
+  margin: 30px 0px;
+}
+.Contact .text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--black);
+}
+.Contact .text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+}
+.Contact .search {
+  margin: 30px 0px;
+}
+.Contact .search input {
+  color: var(--black);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.Contact .search button {
+  background-color: var(--red);
+  outline-color: var(--red);
+  border-color: var(--red);
+}
+
+.copyright {
+  background-color: var(--light-bg);
+  padding: 20px 0px;
+}
+.copyright .copy-text h2 {
+  font-size: 18px;
+  color: var(--light-color);
+}
+.copyright .social ul {
+  list-style: none;
+  text-align: right;
+}
+.copyright .social ul li {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.copyright .social ul li .fa-facebook:before {
+  content: "\f09a";
+  color: #1877f2;
+  font-size: 25px;
+}
+.copyright .social ul li .fa-twitter:before {
+  content: "\f099";
+  color: #1da1f2;
+  font-size: 25px;
+}
+.copyright .social ul li .fa-instagram:before {
+  content: "\f16d";
+  color: #c13584;
+  font-size: 25px;
+}
+.copyright .social ul li .fa-github:before {
+  content: "\f09b";
+  color: #333;
+  font-size: 25px;
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-toggler {
+    border: 1px solid var(--black);
+  }
+  .navbar .navbar-toggler i {
+    color: var(--black);
+  }
+  .navbar .navbar-toggler i:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar .navbar-collapse i {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .Home .home-cont h3 {
+    font-size: 23px;
+  }
+  .Home .home-cont p {
+    font-size: 12px;
+  }
+  .Home .home-cont .btn-light {
+    font-size: 13px;
+  }
+}
+@media (max-width: 764px) {
+  .Home .home-cont h3 {
+    font-size: 18px;
+  }
+  .Home .home-cont p {
+    font-size: 10px;
+    margin: 15px 0px;
+  }
+  .Home .home-cont .btn-light {
+    font-size: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .Home .home-cont {
+    margin: 30px 0px;
+  }
+  .Home .home-cont h3 {
+    font-size: 18px;
+  }
+  .Home .home-cont p {
+    font-size: 10px;
+    margin: 15px 0px;
+  }
+  .Home .home-cont .btn-light {
+    font-size: 10px;
+  }
+  .home-img img {
+    width: 85%;
+  }
+}
+@media (max-width: 976px) {
+  .Services .Services-box:nth-child(2) {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 414px) {
+  .Contact .text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 390px) {
+  .Contact .text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 764px) {
+  .copyright .copy-text h2 {
+    font-size: 16px;
+  }
+  .copyright .social ul {
+    text-align: center;
+  }
+}
+@media (max-width: 414px) {
+  .copyright .copy-text {
+    text-align: center;
+  }
+  .copyright .copy-text h2 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 393px) {
+  .copyright .copy-text h2 {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
